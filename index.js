@@ -17,7 +17,7 @@ app.use(`${apiUrlVersion}/auth`, auth);
 app.use(`${apiUrlVersion}/todo`, todo);
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
 .then(() => console.log("MongoDB Connected."))
 .catch((error) => console.log("Error in connecting MongoDB!", error));
 

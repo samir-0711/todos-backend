@@ -51,3 +51,51 @@ export const update = async(req, res) => {
         return res.status(404).json({message: error.message});
     }
 }
+
+export const deleteTodo = async(req, res) => {
+    try {
+        const { todoID } = req.params;
+
+        if(!todoID) {
+            return res.status(405).json({message: "Parameter Missing!"});
+        }
+
+        const todo = await Todo.findByIdAndDelete(todoID);
+
+        return res.status(200).json({message: 'Todo Deleted', data: todo});
+    } catch(error) {
+        return res.status(404).json({message: error.message});
+    }
+}
+
+export const deleteAll = async(req, res) => {
+    try {
+        const { userID } = req.params;
+
+        if(!userID) {
+            return res.status(405).json({message: "Parameter Missing!"});
+        }
+
+        const todo = await Todo.deleteMany({userID, status:true});
+
+        return res.status(200).json({message: 'All Completed Todo(s) Deleted', data: todo});
+    } catch(error) {
+        return res.status(404).json({message: error.message});
+    }
+}
+
+export const markAll = async(req, res) => {
+    try {
+        const { userID } = req.params;
+
+        if(!userID) {
+            return res.status(405).json({message: "Parameter Missing!"});
+        }
+
+        const todo = await Todo.updateMany({userID, status:false}, {status:true});
+
+        return res.status(200).json({message: 'All Todo(s) are marked as Completed', data: todo});
+    } catch(error) {
+        return res.status(404).json({message: error.message});
+    }
+}
