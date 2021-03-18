@@ -7,7 +7,7 @@ export const signUp = async(req, res) => {
         const { username, password } = req.body;
 
         if(!username || !password) {
-            return res.status(405).json({message: "Parameter Missing!"});
+            return res.status(405).json({message: "Username or Password is Missing!"});
         }
 
         const hash = await bcrypt.hash(password, 12);
@@ -32,7 +32,7 @@ export const signIn = async(req, res) => {
         const { username, password } = req.body;
 
         if(!username || !password) {
-            return res.status(422).json({message: "Parameter Missing!"});
+            return res.status(422).json({message: "Username or Password is Missing!"});
         }
 
         const user = await User.findOne({username: username});

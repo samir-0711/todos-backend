@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 const todoSchema = mongoose.Schema({
     title: {
         type: String,
-        require: [true, 'Title is Required']
+        require: [true, 'Title is Required'],
+        maxlength: 50
     },
     body: {
         type: String,
