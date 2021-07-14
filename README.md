@@ -1,6 +1,7 @@
 # todos-backend
-Todo Application Backend APIs
+![todos-backend](https://socialify.git.ci/samir-0711/todos-backend/image?forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Dark)
 
+Todo Application Backend APIs
 # A. User APIs
 
 ## 1. sign-up
@@ -100,6 +101,23 @@ Todo Application Backend APIs
   ```
 
 # todos-frontend
+![todos-frontend](https://socialify.git.ci/samir-0711/todos-frontend/image?forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Dark)
+
+## Basic structure of the project repository 📂
+
+```terminal
+|
+|- public             # Any files within this directory will not be processed by Webpack but copied directly to the build folder.
+|- src:               # Contains all source code for the React application.
+    |
+    |- components     # Contains all the components used within the app.
+       |- Auth.js     # Responsible for handling SignIn & SignOut.
+       |- Todos.js    # Responsible for handling todos.
+    |- App.js
+    |- index.js
+```
+
+## Screenshot
 [Todo Frontend Repo](https://github.com/samir-0711/todos-frontend)
 
 ![image](https://user-images.githubusercontent.com/68433936/125142496-85d86600-e135-11eb-9101-5ef10a644439.png)
