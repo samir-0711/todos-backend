@@ -120,6 +120,6 @@ Todo Application Backend APIs
 ## Screenshot
 [Todo Frontend Repo](https://github.com/samir-0711/todos-frontend)
 
-![image](https://user-images.githubusercontent.com/68433936/125142496-85d86600-e135-11eb-9101-5ef10a644439.png)
-![image](https://user-images.githubusercontent.com/68433936/125142576-b3bdaa80-e135-11eb-9b9b-f3449c9a1771.png)
+![image](https://user-images.githubusercontent.com/68433936/132255328-0ac29f51-13e2-45bc-8236-4a7b6a38b269.png)
+![image](https://user-images.githubusercontent.com/68433936/132255375-df956374-081f-492d-b2c2-d778f705f811.png)
 
